@@ -1,0 +1,16 @@
+C:\Users\Alejo\source\repos\Kwik E Mart\FormularioKwikEMart\obj\Debug\FormularioKwikEMart.csprojAssemblyReference.cache
+C:\Users\Alejo\source\repos\Kwik E Mart\FormularioKwikEMart\obj\Debug\FormularioKwikEMart.Properties.Resources.resources
+C:\Users\Alejo\source\repos\Kwik E Mart\FormularioKwikEMart\obj\Debug\FormularioKwikEMart.csproj.GenerateResource.cache
+C:\Users\Alejo\source\repos\Kwik E Mart\FormularioKwikEMart\obj\Debug\FormularioKwikEMart.csproj.CoreCompileInputs.cache
+C:\Users\Alejo\source\repos\Kwik E Mart\FormularioKwikEMart\bin\Debug\FormularioKwikEMart.exe.config
+C:\Users\Alejo\source\repos\Kwik E Mart\FormularioKwikEMart\bin\Debug\FormularioKwikEMart.exe
+C:\Users\Alejo\source\repos\Kwik E Mart\FormularioKwikEMart\bin\Debug\FormularioKwikEMart.pdb
+C:\Users\Alejo\source\repos\Kwik E Mart\FormularioKwikEMart\bin\Debug\Entidades.dll
+C:\Users\Alejo\source\repos\Kwik E Mart\FormularioKwikEMart\bin\Debug\Entidades.pdb
+C:\Users\Alejo\source\repos\Kwik E Mart\FormularioKwikEMart\obj\Debug\FormularioKwikEMart.csproj.CopyComplete
+C:\Users\Alejo\source\repos\Kwik E Mart\FormularioKwikEMart\obj\Debug\FormularioKwikEMart.exe
+C:\Users\Alejo\source\repos\Kwik E Mart\FormularioKwikEMart\obj\Debug\FormularioKwikEMart.pdb
+C:\Users\Alejo\source\repos\Kwik E Mart\FormularioKwikEMart\obj\Debug\FormularioKwikEMart.FormLogin.resources
+C:\Users\Alejo\source\repos\Kwik E Mart\FormularioKwikEMart\obj\Debug\FormularioKwikEMart.FormPrincipal.resources
+C:\Users\Alejo\source\repos\Kwik E Mart\FormularioKwikEMart\obj\Debug\FormularioKwikEMart.FormAltaProducto.resources
+C:\Users\Alejo\source\repos\Kwik E Mart\FormularioKwikEMart\obj\Debug\FormularioKwikEMart.FormFinalizarCompra.resources
