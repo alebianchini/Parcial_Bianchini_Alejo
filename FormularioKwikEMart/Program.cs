@@ -16,7 +16,17 @@ namespace FormularioKwikEMart
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FormPrincipal());
+            FormLogin login = new FormLogin();
+            FormPrincipal formPrincipal = new FormPrincipal();
+
+            do
+            {
+                formPrincipal.DialogResult = DialogResult.Retry;
+                if (login.ShowDialog() == DialogResult.OK)
+                {
+                    formPrincipal.ShowDialog();
+                }
+            } while (formPrincipal.DialogResult == DialogResult.Retry);
         }
     }
 }

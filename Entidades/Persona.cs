@@ -11,7 +11,6 @@ namespace Entidades
         protected string nombre;
         protected string apellido;
         protected int dni;
-        protected long id;
         protected List<Compra> listaTransacciones;
 
         public string Nombre
@@ -28,11 +27,6 @@ namespace Entidades
         public string Apellido
         {
             get { return apellido; }
-        }
-
-        public long Id
-        {
-            get { return id; }
         }
 
         public List<Compra> ListaTransacciones
@@ -53,13 +47,21 @@ namespace Entidades
             this.apellido = "sin apellido";
         }
 
-        public Persona(string nombre, string apellido, int dni, long id):this()
+        public Persona(string nombre, string apellido, int dni):this()
         {
             this.nombre = nombre;
             this.apellido = apellido;
             this.dni = dni;
-            this.id = id;
             listaTransacciones = new List<Compra>();
+        }
+
+        public override string ToString()
+        {
+            StringBuilder sb = new StringBuilder();
+            sb.Append(this.nombre);
+            sb.Append(" ");
+            sb.Append(this.apellido);
+            return sb.ToString();
         }
 
     }

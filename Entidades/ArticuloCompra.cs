@@ -25,6 +25,7 @@ namespace Entidades
         public double PrecioFinal
         {
             get { return precioFinal; }
+            set { this.precioFinal = value; }
         }
         public double PrecioUnitario
         {

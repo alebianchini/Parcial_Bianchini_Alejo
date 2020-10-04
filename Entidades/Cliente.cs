@@ -16,7 +16,7 @@ namespace Entidades
         }
 
 
-        public Cliente(string nombre, string apellido, int dni, long id, long numeroCliente) : base(nombre, apellido, dni, id)
+        public Cliente(string nombre, string apellido, int dni, long numeroCliente) : base(nombre, apellido, dni)
         {
             this.numeroCliente = numeroCliente;
         }

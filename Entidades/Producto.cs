@@ -80,21 +80,6 @@ namespace Entidades
             this.categoriaProducto = tipoProducto;
         }
 
-        /// <summary>
-        /// Obtiene el stock total de una lista de productos
-        /// </summary>
-        /// <param name="lista">lista q ser recorrida</param>
-        /// <returns></returns>
-        public static int GetStockTotalLista(List<Producto> auxList)
-        {
-            int valorRetorno = 0;
-            foreach (Producto item in auxList)
-            {
-                valorRetorno += item.stock;
-            }
-            return valorRetorno;
-        }
-
         public override string ToString()
         {
             StringBuilder sb = new StringBuilder();

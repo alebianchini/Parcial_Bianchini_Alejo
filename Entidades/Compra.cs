@@ -60,26 +60,18 @@ namespace Entidades
         
         public void AgregarArticulo(ArticuloCompra articuloCompra)
         {
+            precioTotal += articuloCompra.PrecioFinal;
 
-            if(Productos.Exists(x => x.Producto.Equals(articuloCompra.Producto))){
-                Productos.Find(x => x.Producto.Equals(articuloCompra.Producto)).Cantidad += articuloCompra.Cantidad;
+            if (Productos.Exists(x => x.Producto.Equals(articuloCompra.Producto,StringComparison.OrdinalIgnoreCase))){
+                ArticuloCompra aux = Productos.Find(x => x.Producto.Equals(articuloCompra.Producto,StringComparison.OrdinalIgnoreCase));
+                aux.Cantidad += articuloCompra.Cantidad;
+                aux.PrecioFinal = aux.Cantidad * aux.PrecioUnitario;
             }
             else
             {
                 productos.Add(articuloCompra);
             }
-                ////Agregar validacion para no repetir las cosas
-            //for (int i = 0; i < productos.Count; i++)
-            //{
-            //    if(articuloCompra.Producto == productos[i].Producto)
-            //    {
-            //        productos[i].Cantidad += articuloCompra.Cantidad;
-            //    }
-            //    else
-            //    {
-            //        productos.Add(articuloCompra);
-            //    }
-            //}
+
         }
     }
 }

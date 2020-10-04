@@ -21,28 +21,18 @@ namespace FormularioKwikEMart
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            Comercio.PrecargaListaClientes();
-            Comercio.PrecargaListaProductos();
-            Comercio.PrecargaListaEmpelados();
-            //List<Cliente> auxLista = Comercio.ListaClientes;
-            //List<Producto> auxListaP = Comercio.ListaProductos;
-            //dgvClientes.DataSource = auxLista;
-            dgvProductos.DataSource = Comercio.ListaProductos;
-            //dgvCarrito.DataSource = Comercio.CompraEnCurso.Productos;
-
-
-
-            /*
-            FormLogin auxForm = new FormLogin();
-            if (auxForm.ShowDialog() == DialogResult.Yes)
+            if (!Comercio.ListaProductos.Any())
             {
-                //auxForm.ShowDialog();
-                login = true;            
+                Comercio.PrecargaListaProductos();
             }
-            else
+
+            if (!Comercio.ListaClientes.Any())
             {
-                this.Close();
-            }*/
+                Comercio.PrecargaListaClientes();
+            }
+
+            dgvProductos.DataSource = Comercio.ListaProductos;
+            this.txbPrecioFinal.Text = "0";
         }
 
         private void btnPrueba_Click(object sender, EventArgs e)
@@ -51,12 +41,9 @@ namespace FormularioKwikEMart
 
         private void nuevoProductoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            //Producto auxProducto = new Producto(11, "Pasteles", 180, 50, Producto.ECategoria.almacen);
             MessageBox.Show(Comercio.AgregarNuevoProducto(11, "Pasteles", 180, 50, Producto.ECategoria.almacen, Comercio.ListaProductos));
             dgvProductos.DataSource = null;
             dgvProductos.DataSource = Comercio.ListaProductos;
-            dgvProductos.AutoResizeColumns();
-
         }
 
         private void agregarToolStripMenuItem1_Click(object sender, EventArgs e)
@@ -67,7 +54,7 @@ namespace FormularioKwikEMart
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-            bool asd = int.TryParse(txtCantidad.Text, out int cantidad);
+            bool asd = int.TryParse(txbCantidad.Text, out int cantidad);
             Producto auxProducto = (Producto)dgvProductos.CurrentRow.DataBoundItem;
             if(!Comercio.AgregarArticuloAlCarrito(new ArticuloCompra(cantidad, auxProducto, (auxProducto.PrecioUnitario * cantidad), auxProducto.PrecioUnitario)))
             {
@@ -77,7 +64,7 @@ namespace FormularioKwikEMart
             {
                 this.dgvCarrito.DataSource = null;
                 this.dgvCarrito.DataSource = Comercio.CompraEnCurso.Productos;
-                dgvCarrito.AutoResizeColumns();
+                this.txbPrecioFinal.Text = Comercio.CompraEnCurso.PrecioTotal.ToString();
             }
         }
 
@@ -88,11 +75,10 @@ namespace FormularioKwikEMart
             
             this.dgvCarrito.DataSource = null;
             this.dgvCarrito.DataSource = Comercio.CompraEnCurso.Productos;
-            dgvCarrito.AutoResizeColumns(); 
             dgvProductos.DataSource = null;
             dgvProductos.DataSource = Comercio.ListaProductos;
-            dgvProductos.AutoResizeColumns();
-            //MessageBox.Show(Comercio.ListaVentas[0].Vendedor.Nombre);
+
+            MessageBox.Show("Gracias!! Vuelva prontosss");
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -100,14 +86,35 @@ namespace FormularioKwikEMart
 
         }
 
+        private void comprasPorEmpleadoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormComprasPorEmpleado formComprasPorEmpleado = new FormComprasPorEmpleado();
+            formComprasPorEmpleado.ShowDialog();
+        }
 
-        //Comercio.FinalizarCompraActual();
-        //    this.dgvCarrito.DataSource = null;
-        //    this.dgvCarrito.DataSource = Comercio.CompraEnCurso.Productos;
-        //    dgvCarrito.AutoResizeColumns(); 
-        //    dgvProductos.DataSource = null;
-        //    dgvProductos.DataSource = Comercio.ListaProductos;
-        //    dgvProductos.AutoResizeColumns();
-        //    MessageBox.Show(Comercio.ListaVentas[0].Vendedor.Nombre);
+        private void stockTotalDeProductosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show($"El stock total de productos es: {Comercio.GetStockTotalLista()}");
+        }
+
+        private void productosConBajoStockToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (!Comercio.GetProductosBajoStock().Any())
+            {
+                MessageBox.Show("No hay productos con bajo stock");
+            }
+            else
+            {
+                FormBajoStock formBajoStock = new FormBajoStock();
+                formBajoStock.ShowDialog();
+            }
+        }
+
+        private void cerrarSeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Comercio.ClearSesiónEmpleadoActivo();
+            this.DialogResult = DialogResult.Retry;
+            this.Close();
+        }
     }
 }
