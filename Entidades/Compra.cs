@@ -32,6 +32,7 @@ namespace Entidades
         public double PrecioTotal
         {
             get { return precioTotal; }
+            set { this.precioTotal = value; }
         }
 
         public List<ArticuloCompra> Productos
@@ -63,9 +64,9 @@ namespace Entidades
             precioTotal += articuloCompra.PrecioFinal;
 
             if (Productos.Exists(x => x.Producto.Equals(articuloCompra.Producto,StringComparison.OrdinalIgnoreCase))){
-                ArticuloCompra aux = Productos.Find(x => x.Producto.Equals(articuloCompra.Producto,StringComparison.OrdinalIgnoreCase));
-                aux.Cantidad += articuloCompra.Cantidad;
-                aux.PrecioFinal = aux.Cantidad * aux.PrecioUnitario;
+                ArticuloCompra auxArt = Productos.Find(x => x.Producto.Equals(articuloCompra.Producto,StringComparison.OrdinalIgnoreCase));
+                auxArt.Cantidad += articuloCompra.Cantidad;
+                auxArt.PrecioFinal = auxArt.Cantidad * auxArt.PrecioUnitario;
             }
             else
             {

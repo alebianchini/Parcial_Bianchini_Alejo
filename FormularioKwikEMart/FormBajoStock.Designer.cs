@@ -48,9 +48,9 @@
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Blue;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
             this.dgvBajoStock.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.dgvBajoStock.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dgvBajoStock.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvBajoStock.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.dgvBajoStock.BackgroundColor = System.Drawing.Color.DodgerBlue;
+            this.dgvBajoStock.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(53)))), ((int)(((byte)(73)))));
             this.dgvBajoStock.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvBajoStock.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.Disable;
             this.dgvBajoStock.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
@@ -67,6 +67,7 @@
             this.dgvBajoStock.EnableHeadersVisualStyles = false;
             this.dgvBajoStock.GridColor = System.Drawing.SystemColors.Highlight;
             this.dgvBajoStock.Location = new System.Drawing.Point(0, 0);
+            this.dgvBajoStock.MultiSelect = false;
             this.dgvBajoStock.Name = "dgvBajoStock";
             this.dgvBajoStock.ReadOnly = true;
             this.dgvBajoStock.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
@@ -78,6 +79,7 @@
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgvBajoStock.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.dgvBajoStock.RowHeadersVisible = false;
             this.dgvBajoStock.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle4.Font = new System.Drawing.Font("MS Reference Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -86,6 +88,7 @@
             dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.White;
             this.dgvBajoStock.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dgvBajoStock.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.dgvBajoStock.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvBajoStock.Size = new System.Drawing.Size(680, 382);
             this.dgvBajoStock.TabIndex = 3;
             // 

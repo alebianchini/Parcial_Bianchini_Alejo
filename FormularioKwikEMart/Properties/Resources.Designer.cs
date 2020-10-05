@@ -63,9 +63,90 @@ namespace FormularioKwikEMart.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _76_761771_newfangled_kwik_e_mart_simpsons_kwik_e_mart {
+            get {
+                object obj = ResourceManager.GetObject("76-761771_newfangled-kwik-e-mart-simpsons-kwik-e-mart", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap apu {
             get {
                 object obj = ResourceManager.GetObject("apu", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Close_Icon {
+            get {
+                object obj = ResourceManager.GetObject("Close Icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Close_Icon1 {
+            get {
+                object obj = ResourceManager.GetObject("Close Icon1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap KwikIcon {
+            get {
+                object obj = ResourceManager.GetObject("KwikIcon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap KwikLogo {
+            get {
+                object obj = ResourceManager.GetObject("KwikLogo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap KwikLogo1 {
+            get {
+                object obj = ResourceManager.GetObject("KwikLogo1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Minimize_blue_icon {
+            get {
+                object obj = ResourceManager.GetObject("Minimize blue icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap png_transparent_white_x_logo_illustration_ico_font_awesome_scalable_graphics_icon_red_x_word_no_material_happy_birthday_vector_images_material_word_thumbnail {
+            get {
+                object obj = ResourceManager.GetObject("png-transparent-white-x-logo-illustration-ico-font-awesome-scalable-graphics-icon" +
+                        "-red-x-word-no-material-happy-birthday-vector-images-material-word-thumbnail", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

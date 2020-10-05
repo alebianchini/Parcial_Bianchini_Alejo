@@ -26,6 +26,10 @@ namespace FormularioKwikEMart
                 {
                     formPrincipal.ShowDialog();
                 }
+                else if(login.DialogResult.Equals(DialogResult.Abort))
+                {
+                    formPrincipal.DialogResult = DialogResult.Abort;
+                }
             } while (formPrincipal.DialogResult == DialogResult.Retry);
         }
     }

@@ -25,7 +25,8 @@ namespace FormularioKwikEMart
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-            //obtener los datos del form y llamar al metodo agregarproducto();
+            Comercio.AgregarNuevoProducto(Comercio.ListaProductos.Count + 1, txbDescripcion.Text, Convert.ToInt32(txbStock.Text), Convert.ToDouble(txbPrecio.Text), (Producto.ECategoria)cbCategoria.SelectedItem);
+            this.Close();
         }
     }
 }

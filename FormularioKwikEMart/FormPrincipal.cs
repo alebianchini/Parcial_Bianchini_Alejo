@@ -8,12 +8,14 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Entidades;
+using System.Media;
 
 namespace FormularioKwikEMart
 {
     public partial class FormPrincipal : Form
     {
-        bool login = false;
+        bool menuIsActive = false;
+        SoundPlayer splayer;
         public FormPrincipal()
         {
             InitializeComponent();
@@ -30,18 +32,15 @@ namespace FormularioKwikEMart
             {
                 Comercio.PrecargaListaClientes();
             }
-
+            splayer = new SoundPlayer(@"..\Sounds\cajaResgistradora.wav");
+            this.menuStrip1.Visible = false;
             dgvProductos.DataSource = Comercio.ListaProductos;
-            this.txbPrecioFinal.Text = "0";
-        }
-
-        private void btnPrueba_Click(object sender, EventArgs e)
-        {
+            this.txbPrecioFinal.Text = "";
         }
 
         private void nuevoProductoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            MessageBox.Show(Comercio.AgregarNuevoProducto(11, "Pasteles", 180, 50, Producto.ECategoria.almacen, Comercio.ListaProductos));
+            //MessageBox.Show(Comercio.AgregarNuevoProducto(11, "Pasteles", 180, 50, Producto.ECategoria.almacen, Comercio.ListaProductos));
             dgvProductos.DataSource = null;
             dgvProductos.DataSource = Comercio.ListaProductos;
         }
@@ -49,7 +48,9 @@ namespace FormularioKwikEMart
         private void agregarToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             FormAltaProducto auxForm = new FormAltaProducto();
-            auxForm.Show();
+            auxForm.ShowDialog();
+            dgvProductos.DataSource = null;
+            dgvProductos.DataSource = Comercio.ListaProductos;
         }
 
         private void btnAgregar_Click(object sender, EventArgs e)
@@ -64,21 +65,37 @@ namespace FormularioKwikEMart
             {
                 this.dgvCarrito.DataSource = null;
                 this.dgvCarrito.DataSource = Comercio.CompraEnCurso.Productos;
-                this.txbPrecioFinal.Text = Comercio.CompraEnCurso.PrecioTotal.ToString();
+                this.txbPrecioFinal.Text = $"${Comercio.CompraEnCurso.PrecioTotal.ToString()}";
             }
         }
 
         private void btnCompra_Click(object sender, EventArgs e)
         {
-            FormFinalizarCompra auxForm = new FormFinalizarCompra();
-            auxForm.ShowDialog();
-            
-            this.dgvCarrito.DataSource = null;
-            this.dgvCarrito.DataSource = Comercio.CompraEnCurso.Productos;
-            dgvProductos.DataSource = null;
-            dgvProductos.DataSource = Comercio.ListaProductos;
+            FormFinalizarCompra formCompra = new FormFinalizarCompra();
 
-            MessageBox.Show("Gracias!! Vuelva prontosss");
+            //SoundPlayer splayer = new SoundPlayer(@"..\Sounds\cajaRegistradora.wav");
+            //string exePath = System.IO.Path.GetDirectoryName(System.Reflection.Assembly.GetEntryAssembly().Location);
+            if (Comercio.CompraEnCurso.Productos.Count >= 1)
+            {
+                if (formCompra.ShowDialog() == DialogResult.OK)
+                {
+                    this.dgvCarrito.DataSource = null;
+                    dgvProductos.DataSource = null;
+                    dgvProductos.DataSource = Comercio.ListaProductos;
+
+                    splayer.Play();
+                    this.txbPrecioFinal.Text = "";
+                    MessageBox.Show("Gracias!! Vuelva prontosss");
+                }
+                else
+                {
+                    MessageBox.Show("Compra interrumpida\nLimpie el carrito si quiere comenzar una nueva compra\no prosiga con la compra en curso");
+                }
+            }
+            else
+            {
+                MessageBox.Show("Aún no hay nada cargado al carrito");
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -116,5 +133,44 @@ namespace FormularioKwikEMart
             this.DialogResult = DialogResult.Retry;
             this.Close();
         }
+
+        private void btnLimpiar_Click(object sender, EventArgs e)
+        {
+            Comercio.LimpiarCarrito();
+            dgvCarrito.DataSource = null;
+            this.txbPrecioFinal.Text = "";
+        }
+
+        private void hideTimer_Tick(object sender, EventArgs e)
+        {
+            var p = this.menuStrip1.PointToClient(MousePosition);
+            if (menuIsActive)
+                return;
+            if (menuStrip1.ClientRectangle.Contains(p))
+                return;
+            foreach (ToolStripMenuItem item in menuStrip1.Items)
+                if (item.DropDown.Visible)
+                    return;
+            this.menuStrip1.Visible = false;
+        }
+
+        private void showTimer_Tick(object sender, EventArgs e)
+        {
+            var p = this.PointToClient(MousePosition);
+            if (this.ClientRectangle.Contains(p) && p.Y < 10)
+                this.menuStrip1.Visible = true;
+        }
+
+        private void menuStrip1_MenuActivate_1(object sender, EventArgs e)
+        {
+            menuIsActive = true;
+        }
+
+        private void menuStrip1_MenuDeactivate_1(object sender, EventArgs e)
+        {
+            menuIsActive = false;
+            this.BeginInvoke(new Action(() => { this.menuStrip1.Visible = false; }));
+        }
+
     }
 }

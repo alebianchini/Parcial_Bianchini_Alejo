@@ -112,6 +112,8 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="Properties\DataSources\Entidades.ArticuloCompra.datasource" />
+    <None Include="Properties\DataSources\Entidades.Producto+ECategoria.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -136,6 +138,17 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Sanjay.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\KwikLogo1.jpg" />
+    <None Include="Resources\KwikLogo.jpg" />
+    <None Include="Resources\KwikIcon.jpg" />
+    <None Include="Resources\76-761771_newfangled-kwik-e-mart-simpsons-kwik-e-mart.png" />
+    <Content Include="Resources\cajaResgistradora.wav" />
+    <None Include="Resources\Close Icon1.png" />
+    <None Include="Resources\png-transparent-white-x-logo-illustration-ico-font-awesome-scalable-graphics-icon-red-x-word-no-material-happy-birthday-vector-images-material-word-thumbnail.png" />
+    <None Include="Resources\Close Icon.png" />
+    <None Include="Resources\Minimize blue icon.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

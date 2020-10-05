@@ -51,11 +51,6 @@ namespace FormularioKwikEMart
             }
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void textBox1_Enter(object sender, EventArgs e)
         {
             if (txbUsuario.Text == "Usuario")
@@ -97,7 +92,7 @@ namespace FormularioKwikEMart
         private void pictureBox2_Click(object sender, EventArgs e)
         {
             this.DialogResult = DialogResult.Abort;
-            Application.Exit();
+            this.Close();
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)

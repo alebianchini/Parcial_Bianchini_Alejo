@@ -18,16 +18,6 @@ namespace FormularioKwikEMart
             InitializeComponent();
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void FormFinalizarCompra_Load(object sender, EventArgs e)
         {
             dgvClientes.DataSource = Comercio.ListaClientes;
@@ -36,6 +26,7 @@ namespace FormularioKwikEMart
         private void btnCompra_Click(object sender, EventArgs e)
         {
             Comercio.FinalizarCompraActual((Cliente)dgvClientes.CurrentRow.DataBoundItem);
+            this.DialogResult = DialogResult.OK;
             this.Close();
         }
 
@@ -55,16 +46,16 @@ namespace FormularioKwikEMart
 
         private void dgvClientes_SelectionChanged(object sender, EventArgs e)
         {
-            lbSubTotal.Text = Comercio.CompraEnCurso.PrecioTotal.ToString();
+            lbSubTotal.Text = $"${Comercio.CompraEnCurso.PrecioTotal.ToString()}";
             if(((Cliente)dgvClientes.CurrentRow.DataBoundItem).Apellido.Equals("Simpson",StringComparison.OrdinalIgnoreCase))
             {
                 lbDescuento.Text = "13%";
-                lbPrecioTotal.Text = (Comercio.CompraEnCurso.PrecioTotal * 0.87).ToString();
+                lbPrecioTotal.Text = $"${(Comercio.CompraEnCurso.PrecioTotal * 0.87).ToString()}";
             }
             else
             {
                 lbDescuento.Text = "0%";
-                lbPrecioTotal.Text = (Comercio.CompraEnCurso.PrecioTotal).ToString();
+                lbPrecioTotal.Text = $"${(Comercio.CompraEnCurso.PrecioTotal).ToString()}";
             }
         }
     }
