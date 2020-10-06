@@ -49,7 +49,6 @@
             this.productosConBajoStockToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.stockTotalDeProductosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cerrarSeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.productosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.agregarToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.rellenarStockToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -65,6 +64,7 @@
             this.hideTimer = new System.Windows.Forms.Timer(this.components);
             this.showTimer = new System.Windows.Forms.Timer(this.components);
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProductos)).BeginInit();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCarrito)).BeginInit();
@@ -184,7 +184,7 @@
             this.productosConBajoStockToolStripMenuItem,
             this.stockTotalDeProductosToolStripMenuItem});
             this.informesToolStripMenuItem.Name = "informesToolStripMenuItem";
-            this.informesToolStripMenuItem.Size = new System.Drawing.Size(143, 22);
+            this.informesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.informesToolStripMenuItem.Text = "Informes";
             // 
             // comprasPorEmpleadoToolStripMenuItem
@@ -211,15 +211,9 @@
             // cerrarSeToolStripMenuItem
             // 
             this.cerrarSeToolStripMenuItem.Name = "cerrarSeToolStripMenuItem";
-            this.cerrarSeToolStripMenuItem.Size = new System.Drawing.Size(143, 22);
+            this.cerrarSeToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.cerrarSeToolStripMenuItem.Text = "Cerrar Sesión";
             this.cerrarSeToolStripMenuItem.Click += new System.EventHandler(this.cerrarSeToolStripMenuItem_Click);
-            // 
-            // salirToolStripMenuItem
-            // 
-            this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
-            this.salirToolStripMenuItem.Size = new System.Drawing.Size(143, 22);
-            this.salirToolStripMenuItem.Text = "Salir";
             // 
             // productosToolStripMenuItem
             // 
@@ -233,14 +227,14 @@
             // agregarToolStripMenuItem1
             // 
             this.agregarToolStripMenuItem1.Name = "agregarToolStripMenuItem1";
-            this.agregarToolStripMenuItem1.Size = new System.Drawing.Size(148, 22);
+            this.agregarToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
             this.agregarToolStripMenuItem1.Text = "Agregar";
             this.agregarToolStripMenuItem1.Click += new System.EventHandler(this.agregarToolStripMenuItem1_Click);
             // 
             // rellenarStockToolStripMenuItem
             // 
             this.rellenarStockToolStripMenuItem.Name = "rellenarStockToolStripMenuItem";
-            this.rellenarStockToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
+            this.rellenarStockToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.rellenarStockToolStripMenuItem.Text = "Rellenar Stock";
             this.rellenarStockToolStripMenuItem.Click += new System.EventHandler(this.rellenarStockToolStripMenuItem_Click);
             // 
@@ -416,6 +410,7 @@
             0,
             0,
             0});
+            this.txbCantidad.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txbCantidad_KeyPress);
             // 
             // btnLimpiar
             // 
@@ -447,12 +442,20 @@
             // 
             // pictureBox1
             // 
+            this.pictureBox1.Image = global::FormularioKwikEMart.Properties.Resources.KwikLogo;
             this.pictureBox1.Location = new System.Drawing.Point(448, 27);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(337, 77);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.pictureBox1.TabIndex = 19;
             this.pictureBox1.TabStop = false;
+            // 
+            // salirToolStripMenuItem
+            // 
+            this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
+            this.salirToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.salirToolStripMenuItem.Text = "Salir";
+            this.salirToolStripMenuItem.Click += new System.EventHandler(this.salirToolStripMenuItem_Click);
             // 
             // FormPrincipal
             // 
@@ -496,7 +499,6 @@
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem inicioToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem cerrarSeToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem salirToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem productosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem agregarToolStripMenuItem1;
         private System.Windows.Forms.TextBox txbTitulo2;
@@ -516,6 +518,7 @@
         private System.Windows.Forms.Timer showTimer;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.ToolStripMenuItem rellenarStockToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem salirToolStripMenuItem;
     }
 }
 

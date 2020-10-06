@@ -181,5 +181,19 @@ namespace FormularioKwikEMart
             dgvProductos.DataSource = null;
             dgvProductos.DataSource = Comercio.ListaProductos;
         }
+
+        private void txbCantidad_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsNumber(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void salirToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.DialogResult = DialogResult.Abort;
+            this.Close();
+        }
     }
 }

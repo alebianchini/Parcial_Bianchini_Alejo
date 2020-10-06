@@ -149,11 +149,11 @@
     <None Include="Resources\Sanjay.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\KwikLogo1.jpg" />
-    <None Include="Resources\KwikIcon.jpg" />
     <Content Include="Resources\cajaResgistradora.wav" />
+    <None Include="Resources\KwikLogo.jpg" />
     <None Include="Resources\Close Icon1.png" />
     <None Include="Resources\Minimize blue icon.png" />
+    <None Include="Resources\KwikIcon.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

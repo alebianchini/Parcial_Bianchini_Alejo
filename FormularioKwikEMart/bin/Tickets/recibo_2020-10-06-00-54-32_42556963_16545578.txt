@@ -1,0 +1,17 @@
+Fecha de Compra: 6/10/2020 00:54:32
+-------------------------------------------------
+Datos del Cliente: 
+	Nombre Completo: Carl Carlson
+	DNI: 16545578
+	Nro Cliente: 7
+-------------------------------------------------
+Datos del Vendedor: 
+	Nombre Completo: Sanjay Nahasapeemapetilon
+	DNI: 42556963
+	Nro Empleado: 2
+-------------------------------------------------
+Productos
+Leche			 x2  $100
+Precio Total: 			100
+-------------------------------------------------
+Graciasss, Vuelvass prontosss!!!

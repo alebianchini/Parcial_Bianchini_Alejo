@@ -93,9 +93,9 @@ namespace FormularioKwikEMart.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap KwikLogo1 {
+        internal static System.Drawing.Bitmap KwikLogo {
             get {
-                object obj = ResourceManager.GetObject("KwikLogo1", resourceCulture);
+                object obj = ResourceManager.GetObject("KwikLogo", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

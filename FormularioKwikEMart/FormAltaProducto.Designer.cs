@@ -46,9 +46,11 @@
             this.txbStock.Name = "txbStock";
             this.txbStock.Size = new System.Drawing.Size(121, 20);
             this.txbStock.TabIndex = 1;
+            this.txbStock.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txbStock_KeyPress);
             // 
             // cbCategoria
             // 
+            this.cbCategoria.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbCategoria.FormattingEnabled = true;
             this.cbCategoria.Location = new System.Drawing.Point(331, 115);
             this.cbCategoria.Name = "cbCategoria";
@@ -110,6 +112,7 @@
             this.txbDescripcion.Name = "txbDescripcion";
             this.txbDescripcion.Size = new System.Drawing.Size(121, 20);
             this.txbDescripcion.TabIndex = 0;
+            this.txbDescripcion.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txbDescripcion_KeyPress);
             // 
             // txbPrecio
             // 
@@ -117,6 +120,7 @@
             this.txbPrecio.Name = "txbPrecio";
             this.txbPrecio.Size = new System.Drawing.Size(121, 20);
             this.txbPrecio.TabIndex = 2;
+            this.txbPrecio.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txbPrecio_KeyPress);
             // 
             // btnAgregar
             // 
