@@ -113,20 +113,20 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <None Include="Properties\DataSources\Entidades.ArticuloCompra.datasource" />
     <None Include="Properties\DataSources\Entidades.Producto+ECategoria.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
@@ -150,13 +150,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\KwikLogo1.jpg" />
-    <None Include="Resources\KwikLogo.jpg" />
     <None Include="Resources\KwikIcon.jpg" />
-    <None Include="Resources\76-761771_newfangled-kwik-e-mart-simpsons-kwik-e-mart.png" />
     <Content Include="Resources\cajaResgistradora.wav" />
     <None Include="Resources\Close Icon1.png" />
-    <None Include="Resources\png-transparent-white-x-logo-illustration-ico-font-awesome-scalable-graphics-icon-red-x-word-no-material-happy-birthday-vector-images-material-word-thumbnail.png" />
-    <None Include="Resources\Close Icon.png" />
     <None Include="Resources\Minimize blue icon.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

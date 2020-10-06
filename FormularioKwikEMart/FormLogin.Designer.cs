@@ -76,7 +76,6 @@
             // pictureBox3
             // 
             this.pictureBox3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox3.Image = global::FormularioKwikEMart.Properties.Resources.KwikIcon;
             this.pictureBox3.Location = new System.Drawing.Point(24, 76);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(153, 168);
@@ -124,7 +123,6 @@
             // pictureBox2
             // 
             this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox2.Image = global::FormularioKwikEMart.Properties.Resources.Close_Icon1;
             this.pictureBox2.Location = new System.Drawing.Point(751, 0);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(28, 30);
@@ -136,7 +134,6 @@
             // pictureBox1
             // 
             this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox1.Image = global::FormularioKwikEMart.Properties.Resources.Minimize_blue_icon;
             this.pictureBox1.Location = new System.Drawing.Point(716, 0);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(29, 30);

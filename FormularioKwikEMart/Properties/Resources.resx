@@ -121,9 +121,6 @@
   <data name="Minimize blue icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Minimize blue icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="KwikLogo" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\KwikLogo.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="apu" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\apu.JPG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -133,17 +130,8 @@
   <data name="Sanjay" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Sanjay.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Close Icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Close Icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="KwikIcon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\KwikIcon.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="png-transparent-white-x-logo-illustration-ico-font-awesome-scalable-graphics-icon-red-x-word-no-material-happy-birthday-vector-images-material-word-thumbnail" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\png-transparent-white-x-logo-illustration-ico-font-awesome-scalable-graphics-icon-red-x-word-no-material-happy-birthday-vector-images-material-word-thumbnail.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="76-761771_newfangled-kwik-e-mart-simpsons-kwik-e-mart" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\76-761771_newfangled-kwik-e-mart-simpsons-kwik-e-mart.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="KwikLogo1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\KwikLogo1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
