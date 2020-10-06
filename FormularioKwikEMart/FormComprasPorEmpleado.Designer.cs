@@ -74,6 +74,7 @@
             this.dgvComprasPorEmpleado.EnableHeadersVisualStyles = false;
             this.dgvComprasPorEmpleado.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(159)))), ((int)(((byte)(127)))));
             this.dgvComprasPorEmpleado.Location = new System.Drawing.Point(0, 0);
+            this.dgvComprasPorEmpleado.MultiSelect = false;
             this.dgvComprasPorEmpleado.Name = "dgvComprasPorEmpleado";
             this.dgvComprasPorEmpleado.ReadOnly = true;
             this.dgvComprasPorEmpleado.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
@@ -94,6 +95,7 @@
             dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.White;
             this.dgvComprasPorEmpleado.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dgvComprasPorEmpleado.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.dgvComprasPorEmpleado.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvComprasPorEmpleado.Size = new System.Drawing.Size(569, 392);
             this.dgvComprasPorEmpleado.TabIndex = 2;
             // 
