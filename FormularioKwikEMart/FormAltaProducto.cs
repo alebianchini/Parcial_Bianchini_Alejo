@@ -25,7 +25,14 @@ namespace FormularioKwikEMart
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-            Comercio.AgregarNuevoProducto(Comercio.ListaProductos.Count + 1, txbDescripcion.Text, Convert.ToInt32(txbStock.Text), Convert.ToDouble(txbPrecio.Text), (Producto.ECategoria)cbCategoria.SelectedItem);
+            if (txbDescripcion.Text != "" && txbPrecio.Text != "" && txbStock.Text != "" && cbCategoria.Text != "")
+            {
+                Comercio.AgregarNuevoProducto(Comercio.ListaProductos.Count + 1, txbDescripcion.Text, Convert.ToInt32(txbStock.Text), Convert.ToDouble(txbPrecio.Text), (Producto.ECategoria)cbCategoria.SelectedItem);
+            }
+            else
+            {
+                MessageBox.Show("Primero ingrese datos en los campos");
+            }    
             this.Close();
         }
     }
