@@ -1,0 +1,18 @@
+Fecha de Compra: 5/10/2020 22:46:50
+-------------------------------------------------
+Datos del Cliente: 
+	Nombre Completo: Bart Simpson
+	DNI: 39564578
+	Nro Cliente: 4
+-------------------------------------------------
+Datos del Vendedor: 
+	Nombre Completo: Sanjay Nahasapeemapetilon
+	DNI: 42556963
+	Nro Empleado: 2
+-------------------------------------------------
+Productos
+Gaseosa			 x2  $280
+Muslo de pollo			 x1  $175
+Precio Total: 			455
+-------------------------------------------------
+Graciasss, Vuelvass prontosss!!!

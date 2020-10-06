@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Entidades;
@@ -56,6 +57,30 @@ namespace FormularioKwikEMart
             {
                 lbDescuento.Text = "0%";
                 lbPrecioTotal.Text = $"${(Comercio.CompraEnCurso.PrecioTotal).ToString()}";
+            }
+        }
+
+        private void txbDni_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsNumber(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txbNombre_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!Regex.IsMatch(e.KeyChar.ToString(), "^[A-Za-z ]+$"))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txbApellido_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!Regex.IsMatch(e.KeyChar.ToString(), "^[A-Za-z ]+$"))
+            {
+                e.Handled = true;
             }
         }
     }

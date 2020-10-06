@@ -1,0 +1,17 @@
+Fecha de Compra: 5/10/2020 22:47:21
+-------------------------------------------------
+Datos del Cliente: 
+	Nombre Completo: Homero Simpson
+	DNI: 19564578
+	Nro Cliente: 1
+-------------------------------------------------
+Datos del Vendedor: 
+	Nombre Completo: Sanjay Nahasapeemapetilon
+	DNI: 42556963
+	Nro Empleado: 2
+-------------------------------------------------
+Productos
+Costilla de Cerdo			 x1  $315
+Precio Total: 			315
+-------------------------------------------------
+Graciasss, Vuelvass prontosss!!!

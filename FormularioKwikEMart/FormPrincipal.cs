@@ -9,6 +9,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Entidades;
 using System.Media;
+using System.Security.Cryptography;
+using System.IO;
 
 namespace FormularioKwikEMart
 {
@@ -32,6 +34,12 @@ namespace FormularioKwikEMart
             {
                 Comercio.PrecargaListaClientes();
             }
+
+            if (!Comercio.ListaVentas.Any())
+            {
+                Comercio.PrecargaListaVentas();
+            }
+            
             splayer = new SoundPlayer(@"..\Sounds\cajaResgistradora.wav");
             this.menuStrip1.Visible = false;
             dgvProductos.DataSource = Comercio.ListaProductos;
@@ -73,8 +81,6 @@ namespace FormularioKwikEMart
         {
             FormFinalizarCompra formCompra = new FormFinalizarCompra();
 
-            //SoundPlayer splayer = new SoundPlayer(@"..\Sounds\cajaRegistradora.wav");
-            //string exePath = System.IO.Path.GetDirectoryName(System.Reflection.Assembly.GetEntryAssembly().Location);
             if (Comercio.CompraEnCurso.Productos.Count >= 1)
             {
                 if (formCompra.ShowDialog() == DialogResult.OK)
@@ -85,6 +91,7 @@ namespace FormularioKwikEMart
 
                     splayer.Play();
                     this.txbPrecioFinal.Text = "";
+
                     MessageBox.Show("Gracias!! Vuelva prontosss");
                 }
                 else
@@ -96,11 +103,6 @@ namespace FormularioKwikEMart
             {
                 MessageBox.Show("Aún no hay nada cargado al carrito");
             }
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void comprasPorEmpleadoToolStripMenuItem_Click(object sender, EventArgs e)
@@ -172,5 +174,12 @@ namespace FormularioKwikEMart
             this.BeginInvoke(new Action(() => { this.menuStrip1.Visible = false; }));
         }
 
+        private void rellenarStockToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormSumarStock formSumarStock = new FormSumarStock();
+            formSumarStock.ShowDialog();
+            dgvProductos.DataSource = null;
+            dgvProductos.DataSource = Comercio.ListaProductos;
+        }
     }
 }

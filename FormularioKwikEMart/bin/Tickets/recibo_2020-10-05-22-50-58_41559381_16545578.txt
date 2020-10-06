@@ -1,0 +1,17 @@
+Fecha de Compra: 5/10/2020 22:50:58
+-------------------------------------------------
+Datos del Cliente: 
+	Nombre Completo: Abraham Simpson
+	DNI: 16545578
+	Nro Cliente: 5
+-------------------------------------------------
+Datos del Vendedor: 
+	Nombre Completo: Apu Nahasapeemapetilon
+	DNI: 41559381
+	Nro Empleado: 1
+-------------------------------------------------
+Productos
+Queso Cheddar			 x450  $67500
+Precio Total: 			67500
+-------------------------------------------------
+Graciasss, Vuelvass prontosss!!!

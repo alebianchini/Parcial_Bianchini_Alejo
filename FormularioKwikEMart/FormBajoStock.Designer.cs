@@ -99,7 +99,7 @@
             this.ClientSize = new System.Drawing.Size(680, 382);
             this.Controls.Add(this.dgvBajoStock);
             this.Name = "FormBajoStock";
-            this.Text = "FormBajoStock";
+            this.Text = "Lista de Productos con Bajo Stock";
             this.Load += new System.EventHandler(this.FormBajoStock_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvBajoStock)).EndInit();
             this.ResumeLayout(false);

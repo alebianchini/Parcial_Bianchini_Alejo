@@ -16,3 +16,4 @@ C:\Users\Alejo\source\repos\Kwik E Mart\FormularioKwikEMart\obj\Debug\Formulario
 C:\Users\Alejo\source\repos\Kwik E Mart\FormularioKwikEMart\obj\Debug\FormularioKwikEMart.FormFinalizarCompra.resources
 C:\Users\Alejo\source\repos\Kwik E Mart\FormularioKwikEMart\obj\Debug\FormularioKwikEMart.FormComprasPorEmpleado.resources
 C:\Users\Alejo\source\repos\Kwik E Mart\FormularioKwikEMart\obj\Debug\FormularioKwikEMart.FormBajoStock.resources
+C:\Users\Alejo\source\repos\Kwik E Mart\FormularioKwikEMart\obj\Debug\FormularioKwikEMart.FormSumarStock.resources

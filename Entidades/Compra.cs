@@ -51,14 +51,18 @@ namespace Entidades
             this.productos = new List<ArticuloCompra>();
         }
 
-        public Compra(Cliente comprador, Empleado vendedor, double precioTotal)
+        public Compra(Cliente comprador, Empleado vendedor, double precioTotal) : this()
         {
             this.comprador = comprador;
             this.vendedor = vendedor;
             this.precioTotal = precioTotal;
-            this.productos = new List<ArticuloCompra>();
         }
-        
+
+        public Compra(Cliente comprador, Empleado vendedor, double precioTotal, DateTime dateTime) : this(comprador,vendedor,precioTotal)
+        {
+            this.dateTime = dateTime;
+        }
+
         public void AgregarArticulo(ArticuloCompra articuloCompra)
         {
             precioTotal += articuloCompra.PrecioFinal;
@@ -73,6 +77,34 @@ namespace Entidades
                 productos.Add(articuloCompra);
             }
 
+        }
+
+        public override string ToString()
+        {
+            StringBuilder sb = new StringBuilder();
+            sb.AppendLine($"Fecha de Compra: {this.DateTime}");
+            sb.AppendLine("-------------------------------------------------");
+            sb.AppendLine("Datos del Cliente: ");
+            sb.AppendLine($"\tNombre Completo: {this.Comprador.Nombre} {this.Comprador.Apellido}");
+            sb.AppendLine($"\tDNI: {this.Comprador.Dni}");
+            sb.AppendLine($"\tNro Cliente: {this.Comprador.NumeroCliente}");
+            sb.AppendLine("-------------------------------------------------");
+            sb.AppendLine("Datos del Vendedor: ");
+            sb.AppendLine($"\tNombre Completo: {this.Vendedor.Nombre} {this.Vendedor.Apellido}");
+            sb.AppendLine($"\tDNI: {this.Vendedor.Dni}");
+            sb.AppendLine($"\tNro Empleado: {this.Vendedor.NumeroEmpleado}");
+            sb.AppendLine("-------------------------------------------------");
+            sb.AppendLine("Productos");
+
+            foreach(var p in this.Productos)
+            {
+                sb.AppendLine($"{p.Producto}\t\t\t x{p.Cantidad}  ${p.PrecioFinal}");
+            }
+
+            sb.AppendLine($"Precio Total: \t\t\t{this.precioTotal}");
+            sb.AppendLine("-------------------------------------------------");
+            sb.AppendLine($"Graciasss, Vuelvass prontosss!!!");
+            return sb.ToString();
         }
     }
 }
