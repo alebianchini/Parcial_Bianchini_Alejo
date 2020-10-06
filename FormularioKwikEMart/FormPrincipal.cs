@@ -195,5 +195,14 @@ namespace FormularioKwikEMart
             this.DialogResult = DialogResult.Abort;
             this.Close();
         }
+
+        private void btnQuitarProducto_Click(object sender, EventArgs e)
+        {
+            ArticuloCompra auxArt = (ArticuloCompra)dgvCarrito.CurrentRow.DataBoundItem;
+            Comercio.QuitarProductoCarrito(auxArt.Producto);
+            dgvCarrito.DataSource = null;
+            dgvCarrito.DataSource = Comercio.CompraEnCurso.Productos;
+            txbPrecioFinal.Text = Comercio.CompraEnCurso.PrecioTotal.ToString();
+        }
     }
 }

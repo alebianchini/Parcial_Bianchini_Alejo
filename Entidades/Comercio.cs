@@ -90,100 +90,6 @@ namespace Entidades
             return "Error en la carga";
         }
 
-        public static void PrecargaListaClientes()
-        {
-            listaClientes.Add(new Cliente("Homero", "Simpson", 19564578, 1));
-            listaClientes.Add(new Cliente("Marge", "Simpson", 20124578, 2));
-            listaClientes.Add(new Cliente("Lisa", "Simpson", 40599578, 3));
-            listaClientes.Add(new Cliente("Bart", "Simpson", 39564578, 4));
-            listaClientes.Add(new Cliente("Abraham", "Simpson", 4545578, 5));
-            listaClientes.Add(new Cliente("Armando", "Barreda", 7545578, 6));
-            listaClientes.Add(new Cliente("Carl", "Carlson", 16545578, 7));
-            listaClientes.Add(new Cliente("Montgomery", "Burns", 2545578, 8));
-            listaClientes.Add(new Cliente("Milhouse", "Van Houten", 41545578, 9));
-            listaClientes.Add(new Cliente("Ned", "Flanders", 15598478, 10));
-            listaClientes.Add(new Cliente("Professor", "Frink", 21564328, 11));
-            listaClientes.Add(new Cliente("Barney", "Gumble", 18465218, 12));
-            listaClientes.Add(new Cliente("Bob", "Patiño", 13512648, 13));
-            listaClientes.Add(new Cliente("Edna", "Krabappel", 20543278, 14));
-            listaClientes.Add(new Cliente("Nelson", "Muntz", 38512178, 15));
-            listaClientes.Add(new Cliente("Kent", "Brockman", 25511231, 16));
-            listaClientes.Add(new Cliente("Otto", "Mann", 32145578, 17));
-            listaClientes.Add(new Cliente("Patty", "Bouvier", 11234578, 18));
-            listaClientes.Add(new Cliente("Selma", "Bouvier", 11234579, 19));
-            listaClientes.Add(new Cliente("Moe", "Szyslak", 16111178, 20));
-        }
-
-        public static void PrecargaListaProductos()
-        {
-            listaProductos.Add(new Producto(1, "Gaseosa", 90, 140.00f, Producto.ECategoria.almacen));
-            listaProductos.Add(new Producto(2, "Galletita", 180, 45.50f, Producto.ECategoria.almacen));
-            listaProductos.Add(new Producto(3, "Bife de chorizo", 3, 340.50f, Producto.ECategoria.carniceria));
-            listaProductos.Add(new Producto(4, "Bola de lomo", 16, 290, Producto.ECategoria.carniceria));
-            listaProductos.Add(new Producto(5, "Carne picada", 30, 220, Producto.ECategoria.carniceria));
-            listaProductos.Add(new Producto(6, "Pata de pollo", 14, 210.50f, Producto.ECategoria.carniceria));
-            listaProductos.Add(new Producto(7, "Pechuga de pollo", 13, 180, Producto.ECategoria.carniceria));
-            listaProductos.Add(new Producto(8, "Muslo de pollo", 8, 175, Producto.ECategoria.carniceria));
-            listaProductos.Add(new Producto(9, "Leche", 24, 50, Producto.ECategoria.almacen));
-            listaProductos.Add(new Producto(10, "Pan lactal blanco", 2, 10, Producto.ECategoria.almacen));
-            listaProductos.Add(new Producto(11, "Pan lactal negro", 36, 10, Producto.ECategoria.almacen));
-            listaProductos.Add(new Producto(12, "Pan frances", 48, 10, Producto.ECategoria.almacen));
-            listaProductos.Add(new Producto(13, "Huevos", 55, 10, Producto.ECategoria.almacen));
-            listaProductos.Add(new Producto(14, "Costilla de Cerdo", 27, 315, Producto.ECategoria.carniceria));
-            listaProductos.Add(new Producto(15, "Panceta", 6, 315, Producto.ECategoria.carniceria));
-            listaProductos.Add(new Producto(16, "Tomate", 4, 20, Producto.ECategoria.verduleria));
-            listaProductos.Add(new Producto(17, "Papa", 19, 30, Producto.ECategoria.verduleria));
-            listaProductos.Add(new Producto(18, "Lechuga", 7, 15, Producto.ECategoria.verduleria));
-            listaProductos.Add(new Producto(19, "Cebolla", 37, 15, Producto.ECategoria.verduleria));
-            listaProductos.Add(new Producto(20, "Berenjena", 9, 15, Producto.ECategoria.verduleria));
-            listaProductos.Add(new Producto(21, "Batata", 21, 15, Producto.ECategoria.verduleria));
-            listaProductos.Add(new Producto(22, "Zapallo", 24, 15, Producto.ECategoria.verduleria));
-        }
-
-        public static void PrecargaListaVentas()
-        {
-            listaVentas.Add(new Compra(listaClientes[0], listaEmpleados[0], 570.50f, DateTime.Now));
-            listaVentas.Add(new Compra(listaClientes[2], listaEmpleados[1], 1570.50f, DateTime.Now));
-            listaVentas.Add(new Compra(listaClientes[3], listaEmpleados[0], 2380.75f, DateTime.Now));
-            listaVentas.Add(new Compra(listaClientes[4], listaEmpleados[0], 4920.75f, DateTime.Now));
-            listaVentas.Add(new Compra(listaClientes[1], listaEmpleados[1], 350.50f, DateTime.Now));
-            listaVentas.Add(new Compra(listaClientes[0], listaEmpleados[0], 420.50f, DateTime.Now));
-            listaVentas.Add(new Compra(listaClientes[17], listaEmpleados[1], 1900.50f, DateTime.Now));
-            listaVentas.Add(new Compra(listaClientes[12], listaEmpleados[1], 170.25f, DateTime.Now));
-            listaVentas.Add(new Compra(listaClientes[9], listaEmpleados[0], 145.25f, DateTime.Now));
-            listaVentas.Add(new Compra(listaClientes[18], listaEmpleados[1], 570.50f, DateTime.Now));
-            listaVentas.Add(new Compra(listaClientes[6], listaEmpleados[0], 990.75f, DateTime.Now));
-            listaVentas.Add(new Compra(listaClientes[13], listaEmpleados[1], 435.50f, DateTime.Now));
-            listaVentas.Add(new Compra(listaClientes[5], listaEmpleados[0], 260.25f, DateTime.Now));
-            listaVentas.Add(new Compra(listaClientes[1], listaEmpleados[0], 785.50f, DateTime.Now));
-            listaVentas.Add(new Compra(listaClientes[3], listaEmpleados[0], 95.50f, DateTime.Now));
-            listaVentas.Add(new Compra(listaClientes[12], listaEmpleados[1], 695.50f, DateTime.Now));
-            listaVentas.Add(new Compra(listaClientes[15], listaEmpleados[0], 365.25f, DateTime.Now));
-            listaVentas.Add(new Compra(listaClientes[14], listaEmpleados[0], 125.75f, DateTime.Now));
-            listaVentas.Add(new Compra(listaClientes[15], listaEmpleados[1], 565.50f, DateTime.Now));
-            listaVentas.Add(new Compra(listaClientes[9], listaEmpleados[0], 5190.50f, DateTime.Now));
-            listaEmpleados[0].ListaTransacciones.Add(listaVentas[0]);
-            listaEmpleados[1].ListaTransacciones.Add(listaVentas[1]);
-            listaEmpleados[0].ListaTransacciones.Add(listaVentas[2]);
-            listaEmpleados[0].ListaTransacciones.Add(listaVentas[3]);
-            listaEmpleados[1].ListaTransacciones.Add(listaVentas[4]);
-            listaEmpleados[0].ListaTransacciones.Add(listaVentas[5]);
-            listaEmpleados[1].ListaTransacciones.Add(listaVentas[6]);
-            listaEmpleados[1].ListaTransacciones.Add(listaVentas[7]);
-            listaEmpleados[0].ListaTransacciones.Add(listaVentas[8]);
-            listaEmpleados[1].ListaTransacciones.Add(listaVentas[9]);
-            listaEmpleados[0].ListaTransacciones.Add(listaVentas[10]);
-            listaEmpleados[1].ListaTransacciones.Add(listaVentas[11]);
-            listaEmpleados[0].ListaTransacciones.Add(listaVentas[12]);
-            listaEmpleados[0].ListaTransacciones.Add(listaVentas[13]);
-            listaEmpleados[0].ListaTransacciones.Add(listaVentas[14]);
-            listaEmpleados[1].ListaTransacciones.Add(listaVentas[15]);
-            listaEmpleados[0].ListaTransacciones.Add(listaVentas[16]);
-            listaEmpleados[0].ListaTransacciones.Add(listaVentas[17]);
-            listaEmpleados[1].ListaTransacciones.Add(listaVentas[18]);
-            listaEmpleados[0].ListaTransacciones.Add(listaVentas[19]);
-        }
-
         public static void PrecargaListaEmpelados()
         {
             listaEmpleados.Add(new Empleado("Apu", "Nahasapeemapetilon", 41559381, 1, "apu"));
@@ -291,9 +197,110 @@ namespace Entidades
             compraEnCurso.PrecioTotal = 0;
         }
 
+        public static void QuitarProductoCarrito(string descripcion)
+        {
+            ArticuloCompra auxArt = compraEnCurso.Productos.Find(x => x.Producto.Equals(descripcion));
+            compraEnCurso.Productos.Remove(auxArt);
+            compraEnCurso.PrecioTotal -= auxArt.PrecioFinal;
+        }
+
         public static void AgregarStock(string descripcion, int cantidad)
         {
             listaProductos.Find(x => x.Descripcion.Equals(descripcion)).Stock += cantidad;
+        }
+
+        public static void PrecargaListaProductos()
+        {
+            listaProductos.Add(new Producto(1, "Gaseosa", 90, 140.00f, Producto.ECategoria.almacen));
+            listaProductos.Add(new Producto(2, "Galletita", 180, 45.50f, Producto.ECategoria.almacen));
+            listaProductos.Add(new Producto(3, "Bife de chorizo", 3, 340.50f, Producto.ECategoria.carniceria));
+            listaProductos.Add(new Producto(4, "Bola de lomo", 16, 290, Producto.ECategoria.carniceria));
+            listaProductos.Add(new Producto(5, "Carne picada", 30, 220, Producto.ECategoria.carniceria));
+            listaProductos.Add(new Producto(6, "Pata de pollo", 14, 210.50f, Producto.ECategoria.carniceria));
+            listaProductos.Add(new Producto(7, "Pechuga de pollo", 13, 180, Producto.ECategoria.carniceria));
+            listaProductos.Add(new Producto(8, "Muslo de pollo", 8, 175, Producto.ECategoria.carniceria));
+            listaProductos.Add(new Producto(9, "Leche", 24, 50, Producto.ECategoria.almacen));
+            listaProductos.Add(new Producto(10, "Pan lactal blanco", 2, 10, Producto.ECategoria.almacen));
+            listaProductos.Add(new Producto(11, "Pan lactal negro", 36, 10, Producto.ECategoria.almacen));
+            listaProductos.Add(new Producto(12, "Pan frances", 48, 10, Producto.ECategoria.almacen));
+            listaProductos.Add(new Producto(13, "Huevos", 55, 10, Producto.ECategoria.almacen));
+            listaProductos.Add(new Producto(14, "Costilla de Cerdo", 27, 315, Producto.ECategoria.carniceria));
+            listaProductos.Add(new Producto(15, "Panceta", 6, 315, Producto.ECategoria.carniceria));
+            listaProductos.Add(new Producto(16, "Tomate", 4, 20, Producto.ECategoria.verduleria));
+            listaProductos.Add(new Producto(17, "Papa", 19, 30, Producto.ECategoria.verduleria));
+            listaProductos.Add(new Producto(18, "Lechuga", 7, 15, Producto.ECategoria.verduleria));
+            listaProductos.Add(new Producto(19, "Cebolla", 37, 15, Producto.ECategoria.verduleria));
+            listaProductos.Add(new Producto(20, "Berenjena", 9, 15, Producto.ECategoria.verduleria));
+            listaProductos.Add(new Producto(21, "Batata", 21, 15, Producto.ECategoria.verduleria));
+            listaProductos.Add(new Producto(22, "Zapallo", 24, 15, Producto.ECategoria.verduleria));
+        }
+
+        public static void PrecargaListaClientes()
+        {
+            listaClientes.Add(new Cliente("Homero", "Simpson", 19564578, 1));
+            listaClientes.Add(new Cliente("Marge", "Simpson", 20124578, 2));
+            listaClientes.Add(new Cliente("Lisa", "Simpson", 40599578, 3));
+            listaClientes.Add(new Cliente("Bart", "Simpson", 39564578, 4));
+            listaClientes.Add(new Cliente("Abraham", "Simpson", 4545578, 5));
+            listaClientes.Add(new Cliente("Armando", "Barreda", 7545578, 6));
+            listaClientes.Add(new Cliente("Carl", "Carlson", 16545578, 7));
+            listaClientes.Add(new Cliente("Montgomery", "Burns", 2545578, 8));
+            listaClientes.Add(new Cliente("Milhouse", "Van Houten", 41545578, 9));
+            listaClientes.Add(new Cliente("Ned", "Flanders", 15598478, 10));
+            listaClientes.Add(new Cliente("Professor", "Frink", 21564328, 11));
+            listaClientes.Add(new Cliente("Barney", "Gumble", 18465218, 12));
+            listaClientes.Add(new Cliente("Bob", "Patiño", 13512648, 13));
+            listaClientes.Add(new Cliente("Edna", "Krabappel", 20543278, 14));
+            listaClientes.Add(new Cliente("Nelson", "Muntz", 38512178, 15));
+            listaClientes.Add(new Cliente("Kent", "Brockman", 25511231, 16));
+            listaClientes.Add(new Cliente("Otto", "Mann", 32145578, 17));
+            listaClientes.Add(new Cliente("Patty", "Bouvier", 11234578, 18));
+            listaClientes.Add(new Cliente("Selma", "Bouvier", 11234579, 19));
+            listaClientes.Add(new Cliente("Moe", "Szyslak", 16111178, 20));
+        }
+
+        public static void PrecargaListaVentas()
+        {
+            listaVentas.Add(new Compra(listaClientes[0], listaEmpleados[0], 570.50f, DateTime.Now));
+            listaVentas.Add(new Compra(listaClientes[2], listaEmpleados[1], 1570.50f, DateTime.Now));
+            listaVentas.Add(new Compra(listaClientes[3], listaEmpleados[0], 2380.75f, DateTime.Now));
+            listaVentas.Add(new Compra(listaClientes[4], listaEmpleados[0], 4920.75f, DateTime.Now));
+            listaVentas.Add(new Compra(listaClientes[1], listaEmpleados[1], 350.50f, DateTime.Now));
+            listaVentas.Add(new Compra(listaClientes[0], listaEmpleados[0], 420.50f, DateTime.Now));
+            listaVentas.Add(new Compra(listaClientes[17], listaEmpleados[1], 1900.50f, DateTime.Now));
+            listaVentas.Add(new Compra(listaClientes[12], listaEmpleados[1], 170.25f, DateTime.Now));
+            listaVentas.Add(new Compra(listaClientes[9], listaEmpleados[0], 145.25f, DateTime.Now));
+            listaVentas.Add(new Compra(listaClientes[18], listaEmpleados[1], 570.50f, DateTime.Now));
+            listaVentas.Add(new Compra(listaClientes[6], listaEmpleados[0], 990.75f, DateTime.Now));
+            listaVentas.Add(new Compra(listaClientes[13], listaEmpleados[1], 435.50f, DateTime.Now));
+            listaVentas.Add(new Compra(listaClientes[5], listaEmpleados[0], 260.25f, DateTime.Now));
+            listaVentas.Add(new Compra(listaClientes[1], listaEmpleados[0], 785.50f, DateTime.Now));
+            listaVentas.Add(new Compra(listaClientes[3], listaEmpleados[0], 95.50f, DateTime.Now));
+            listaVentas.Add(new Compra(listaClientes[12], listaEmpleados[1], 695.50f, DateTime.Now));
+            listaVentas.Add(new Compra(listaClientes[15], listaEmpleados[0], 365.25f, DateTime.Now));
+            listaVentas.Add(new Compra(listaClientes[14], listaEmpleados[0], 125.75f, DateTime.Now));
+            listaVentas.Add(new Compra(listaClientes[15], listaEmpleados[1], 565.50f, DateTime.Now));
+            listaVentas.Add(new Compra(listaClientes[9], listaEmpleados[0], 5190.50f, DateTime.Now));
+            listaEmpleados[0].ListaTransacciones.Add(listaVentas[0]);
+            listaEmpleados[1].ListaTransacciones.Add(listaVentas[1]);
+            listaEmpleados[0].ListaTransacciones.Add(listaVentas[2]);
+            listaEmpleados[0].ListaTransacciones.Add(listaVentas[3]);
+            listaEmpleados[1].ListaTransacciones.Add(listaVentas[4]);
+            listaEmpleados[0].ListaTransacciones.Add(listaVentas[5]);
+            listaEmpleados[1].ListaTransacciones.Add(listaVentas[6]);
+            listaEmpleados[1].ListaTransacciones.Add(listaVentas[7]);
+            listaEmpleados[0].ListaTransacciones.Add(listaVentas[8]);
+            listaEmpleados[1].ListaTransacciones.Add(listaVentas[9]);
+            listaEmpleados[0].ListaTransacciones.Add(listaVentas[10]);
+            listaEmpleados[1].ListaTransacciones.Add(listaVentas[11]);
+            listaEmpleados[0].ListaTransacciones.Add(listaVentas[12]);
+            listaEmpleados[0].ListaTransacciones.Add(listaVentas[13]);
+            listaEmpleados[0].ListaTransacciones.Add(listaVentas[14]);
+            listaEmpleados[1].ListaTransacciones.Add(listaVentas[15]);
+            listaEmpleados[0].ListaTransacciones.Add(listaVentas[16]);
+            listaEmpleados[0].ListaTransacciones.Add(listaVentas[17]);
+            listaEmpleados[1].ListaTransacciones.Add(listaVentas[18]);
+            listaEmpleados[0].ListaTransacciones.Add(listaVentas[19]);
         }
     }
 }

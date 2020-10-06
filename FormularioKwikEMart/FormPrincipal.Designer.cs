@@ -49,6 +49,7 @@
             this.productosConBajoStockToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.stockTotalDeProductosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cerrarSeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.productosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.agregarToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.rellenarStockToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -64,7 +65,7 @@
             this.hideTimer = new System.Windows.Forms.Timer(this.components);
             this.showTimer = new System.Windows.Forms.Timer(this.components);
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnQuitarProducto = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProductos)).BeginInit();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCarrito)).BeginInit();
@@ -184,7 +185,7 @@
             this.productosConBajoStockToolStripMenuItem,
             this.stockTotalDeProductosToolStripMenuItem});
             this.informesToolStripMenuItem.Name = "informesToolStripMenuItem";
-            this.informesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.informesToolStripMenuItem.Size = new System.Drawing.Size(143, 22);
             this.informesToolStripMenuItem.Text = "Informes";
             // 
             // comprasPorEmpleadoToolStripMenuItem
@@ -211,9 +212,16 @@
             // cerrarSeToolStripMenuItem
             // 
             this.cerrarSeToolStripMenuItem.Name = "cerrarSeToolStripMenuItem";
-            this.cerrarSeToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.cerrarSeToolStripMenuItem.Size = new System.Drawing.Size(143, 22);
             this.cerrarSeToolStripMenuItem.Text = "Cerrar Sesión";
             this.cerrarSeToolStripMenuItem.Click += new System.EventHandler(this.cerrarSeToolStripMenuItem_Click);
+            // 
+            // salirToolStripMenuItem
+            // 
+            this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
+            this.salirToolStripMenuItem.Size = new System.Drawing.Size(143, 22);
+            this.salirToolStripMenuItem.Text = "Salir";
+            this.salirToolStripMenuItem.Click += new System.EventHandler(this.salirToolStripMenuItem_Click);
             // 
             // productosToolStripMenuItem
             // 
@@ -227,14 +235,14 @@
             // agregarToolStripMenuItem1
             // 
             this.agregarToolStripMenuItem1.Name = "agregarToolStripMenuItem1";
-            this.agregarToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.agregarToolStripMenuItem1.Size = new System.Drawing.Size(148, 22);
             this.agregarToolStripMenuItem1.Text = "Agregar";
             this.agregarToolStripMenuItem1.Click += new System.EventHandler(this.agregarToolStripMenuItem1_Click);
             // 
             // rellenarStockToolStripMenuItem
             // 
             this.rellenarStockToolStripMenuItem.Name = "rellenarStockToolStripMenuItem";
-            this.rellenarStockToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.rellenarStockToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
             this.rellenarStockToolStripMenuItem.Text = "Rellenar Stock";
             this.rellenarStockToolStripMenuItem.Click += new System.EventHandler(this.rellenarStockToolStripMenuItem_Click);
             // 
@@ -450,12 +458,21 @@
             this.pictureBox1.TabIndex = 19;
             this.pictureBox1.TabStop = false;
             // 
-            // salirToolStripMenuItem
+            // btnQuitarProducto
             // 
-            this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
-            this.salirToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.salirToolStripMenuItem.Text = "Salir";
-            this.salirToolStripMenuItem.Click += new System.EventHandler(this.salirToolStripMenuItem_Click);
+            this.btnQuitarProducto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(53)))), ((int)(((byte)(73)))));
+            this.btnQuitarProducto.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnQuitarProducto.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(159)))), ((int)(((byte)(127)))));
+            this.btnQuitarProducto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnQuitarProducto.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnQuitarProducto.ForeColor = System.Drawing.Color.White;
+            this.btnQuitarProducto.Location = new System.Drawing.Point(26, 46);
+            this.btnQuitarProducto.Name = "btnQuitarProducto";
+            this.btnQuitarProducto.Size = new System.Drawing.Size(112, 58);
+            this.btnQuitarProducto.TabIndex = 20;
+            this.btnQuitarProducto.Text = "Quitar Producto";
+            this.btnQuitarProducto.UseVisualStyleBackColor = false;
+            this.btnQuitarProducto.Click += new System.EventHandler(this.btnQuitarProducto_Click);
             // 
             // FormPrincipal
             // 
@@ -463,6 +480,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(57)))), ((int)(((byte)(80)))));
             this.ClientSize = new System.Drawing.Size(1296, 636);
+            this.Controls.Add(this.btnQuitarProducto);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnLimpiar);
             this.Controls.Add(this.txbCantidad);
@@ -519,6 +537,7 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.ToolStripMenuItem rellenarStockToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem salirToolStripMenuItem;
+        private System.Windows.Forms.Button btnQuitarProducto;
     }
 }
 
